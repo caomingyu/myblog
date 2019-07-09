@@ -22,10 +22,10 @@
   <title>
        
        
-           随笔 | CaoMyの博客
+           文件路径分隔符跨平台问题 | CaoMyの博客
        
   </title>
-  <meta name="title" content="随笔 | CaoMyの博客">
+  <meta name="title" content="文件路径分隔符跨平台问题 | CaoMyの博客">
     
   
   <link rel="stylesheet" href="../../font/iconfont.css">
@@ -44,9 +44,9 @@
          "@id": "http:\/\/www.cmyblog.top"
     },
     "articleSection" : "posts",
-    "name" : "随笔",
-    "headline" : "随笔",
-    "description" : "",
+    "name" : "文件路径分隔符跨平台问题",
+    "headline" : "文件路径分隔符跨平台问题",
+    "description" : "　考虑到不同平台下，文件路径分隔符不同，如Windows下为\x26rsquo;\\\x26rsquo;,Linux下为\x26rsquo;\/\x26lsquo;，项目中如果不考虑分隔符的多平台一致，经常会造成上线问题，报错诸如：\x26rsquo;no such file or directory\x26lsquo;\n　此时，可以使用File的静态常量separator，如，\nString fileHome = \x26quot;\x26quot;; String fileName = \x26quot;\x26quot;; File file = new File(fileHome \x2b File.separator \x2b fileName);  ",
     "inLanguage" : "zh-CN",
     "author" : "CaoMy",
     "creator" : "CaoMy",
@@ -57,7 +57,7 @@
     "datePublished": "2019-07-09 11:13:42 \x2b0800 CST",
     "dateModified" : "2019-07-09 11:13:42 \x2b0800 CST",
     "url" : "http:\/\/www.cmyblog.top\/posts\/%E9%9A%8F%E7%AC%94\/",
-    "wordCount" : "0",
+    "wordCount" : "23",
     "keywords" : [ "Java", "CaoMyの博客"]
 }
 </script>
@@ -116,7 +116,7 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">随笔</h1>
+        <h1 class="post-title" itemprop="name headline">文件路径分隔符跨平台问题</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="http://www.cmyblog.top" rel="author">CaoMy</a> with ♥ 
                 <span class="post-time">
@@ -146,7 +146,16 @@
           
           
 
-          
+          <p>　　考虑到不同平台下，文件路径分隔符不同，如Windows下为&rsquo;<code>\</code>&rsquo;,Linux下为&rsquo;<code>/</code>&lsquo;，项目中如果不考虑分隔符的多平台一致，经常会造成上线问题，报错诸如：&rsquo;<code>no such file or directory</code>&lsquo;</p>
+
+<p>　　此时，可以使用File的静态常量<code>separator</code>，如，</p>
+
+<pre><code class="language-java">String fileHome = &quot;&quot;;
+String fileName = &quot;&quot;;
+                    
+File file = new File(fileHome + File.separator + fileName);
+</code></pre>
+
     </div>
 
     <div class="post-copyright">
@@ -197,7 +206,8 @@
 </article>
           </div>
 		   </main>
-      <footer class="footer">
+      <script src="https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js"></script>
+<footer class="footer">
     <div class="copyright">
         &copy;
         

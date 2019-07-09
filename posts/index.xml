@@ -12,12 +12,14 @@
     
     
     <item>
-      <title>随笔</title>
+      <title>文件路径分隔符跨平台问题</title>
       <link>http://www.cmyblog.top/posts/%E9%9A%8F%E7%AC%94/</link>
       <pubDate>Tue, 09 Jul 2019 11:13:42 +0800</pubDate>
       
       <guid>http://www.cmyblog.top/posts/%E9%9A%8F%E7%AC%94/</guid>
-      <description></description>
+      <description>　考虑到不同平台下，文件路径分隔符不同，如Windows下为&amp;rsquo;\&amp;rsquo;,Linux下为&amp;rsquo;/&amp;lsquo;，项目中如果不考虑分隔符的多平台一致，经常会造成上线问题，报错诸如：&amp;rsquo;no such file or directory&amp;lsquo;
+　此时，可以使用File的静态常量separator，如，
+String fileHome = &amp;quot;&amp;quot;; String fileName = &amp;quot;&amp;quot;; File file = new File(fileHome + File.separator + fileName);  </description>
     </item>
     
     <item>
