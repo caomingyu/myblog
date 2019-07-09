@@ -1,0 +1,36 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CaoMyの博客 on CaoMyの博客</title>
+    <link>http://www.cmyblog.top/</link>
+    <description>Recent content in CaoMyの博客 on CaoMyの博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN	</language>
+    <lastBuildDate>Tue, 09 Jul 2019 09:30:26 +0800</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About</title>
+      <link>http://www.cmyblog.top/about/</link>
+      <pubDate>Tue, 09 Jul 2019 09:30:26 +0800</pubDate>
+      
+      <guid>http://www.cmyblog.top/about/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Waves are the practice of the water. Shunryu Suzuki&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My_first</title>
+      <link>http://www.cmyblog.top/posts/my_first/</link>
+      <pubDate>Mon, 08 Jul 2019 22:54:47 +0800</pubDate>
+      
+      <guid>http://www.cmyblog.top/posts/my_first/</guid>
+      <description>
+
+&lt;h1 id=&#34;this-is-a-test&#34;&gt;This is a Test!&lt;/h1&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

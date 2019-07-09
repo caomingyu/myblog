@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on CaoMyの博客</title>
+    <link>http://www.cmyblog.top/posts/</link>
+    <description>Recent content in Posts on CaoMyの博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN	</language>
+    <lastBuildDate>Mon, 08 Jul 2019 22:54:47 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.cmyblog.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My_first</title>
+      <link>http://www.cmyblog.top/posts/my_first/</link>
+      <pubDate>Mon, 08 Jul 2019 22:54:47 +0800</pubDate>
+      
+      <guid>http://www.cmyblog.top/posts/my_first/</guid>
+      <description> This is a Test! </description>
+    </item>
+    
+  </channel>
+</rss>
