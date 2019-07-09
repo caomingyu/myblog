@@ -22,14 +22,5 @@
 String fileHome = &amp;quot;&amp;quot;; String fileName = &amp;quot;&amp;quot;; File file = new File(fileHome + File.separator + fileName);  </description>
     </item>
     
-    <item>
-      <title>My_first</title>
-      <link>http://www.cmyblog.top/posts/my_first/</link>
-      <pubDate>Mon, 08 Jul 2019 22:54:47 +0800</pubDate>
-      
-      <guid>http://www.cmyblog.top/posts/my_first/</guid>
-      <description>This is a Test!  这是一段代码 ```bash public static void main(){   } ```</description>
-    </item>
-    
   </channel>
 </rss>
