@@ -9,9 +9,9 @@
   
   
   
+  <link rel="prev" href="http://www.cmyblog.top/posts/%E9%9A%8F%E7%AC%94/" />
   
-  <link rel="next" href="http://www.cmyblog.top/posts/idea%E4%B8%ADmaven%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%BE%9D%E8%B5%96/" />
-  <link rel="canonical" href="http://www.cmyblog.top/posts/%E9%9A%8F%E7%AC%94/" />
+  <link rel="canonical" href="http://www.cmyblog.top/posts/idea%E4%B8%ADmaven%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%BE%9D%E8%B5%96/" />
   <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-           文件路径分隔符跨平台问题 | CaoMyの博客
+           Idea中Maven无法显示依赖 | CaoMyの博客
        
   </title>
-  <meta name="title" content="文件路径分隔符跨平台问题 | CaoMyの博客">
+  <meta name="title" content="Idea中Maven无法显示依赖 | CaoMyの博客">
     
   
   <link rel="stylesheet" href="../../font/iconfont.css">
@@ -44,9 +44,9 @@
          "@id": "http:\/\/www.cmyblog.top"
     },
     "articleSection" : "posts",
-    "name" : "文件路径分隔符跨平台问题",
-    "headline" : "文件路径分隔符跨平台问题",
-    "description" : "　考虑到不同平台下，文件路径分隔符不同，如Windows下为\x26rsquo;\\\x26rsquo;,Linux下为\x26rsquo;\/\x26lsquo;，项目中如果不考虑分隔符的多平台一致，经常会造成上线问题，报错诸如：\x26rsquo;no such file or directory\x26lsquo;\n　此时，可以使用File的静态常量separator，如，\nString fileHome = \x26quot;\x26quot;; String fileName = \x26quot;\x26quot;; File file = new File(fileHome \x2b File.separator \x2b fileName);  ",
+    "name" : "Idea中Maven无法显示依赖",
+    "headline" : "Idea中Maven无法显示依赖",
+    "description" : "Idea有时会出现Maven的依赖无法显示情况，即在右边栏Maven工具中,Dependencies一栏中，没有正确的依赖显示，如\n\n　考虑了网上的诸多解决方案，均没有解决问题，后来经过同事帮助，解决了问题，具体解决思路步骤如下：\n   同事通过执行mvn -version命令，输出正常Maven信息，排除本地Maven工具错误的可能 接下来，执行\x26rsquo;mvn clean\x26rsquo;和\x26rsquo;mvn -Dmaven.test.skip=true install\x26rsquo;命令，分别清除编译的class文件并跳过测试进行安装,发现没有输出报错信息，并正常安装，此时可以证明，依赖已经正常引入 接下来，怀疑是Idea缓存的锅，进行Idea的缓存清除操作并重启,如   \n　重启后，Idea里的Maven工具已正常显示依赖项，问题解决，特此记录。",
     "inLanguage" : "zh-CN",
     "author" : "CaoMy",
     "creator" : "CaoMy",
@@ -54,11 +54,11 @@
     "accountablePerson" : "CaoMy",
     "copyrightHolder" : "CaoMy",
     "copyrightYear" : "2019",
-    "datePublished": "2019-07-09 11:13:42 \x2b0800 CST",
-    "dateModified" : "2019-07-09 11:13:42 \x2b0800 CST",
-    "url" : "http:\/\/www.cmyblog.top\/posts\/%E9%9A%8F%E7%AC%94\/",
-    "wordCount" : "23",
-    "keywords" : [ "Java", "CaoMyの博客"]
+    "datePublished": "2019-07-10 21:45:41 \x2b0800 CST",
+    "dateModified" : "2019-07-10 21:45:41 \x2b0800 CST",
+    "url" : "http:\/\/www.cmyblog.top\/posts\/idea%E4%B8%ADmaven%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%BE%9D%E8%B5%96\/",
+    "wordCount" : "10",
+    "keywords" : [ "Maven","踩坑", "CaoMyの博客"]
 }
 </script>
 
@@ -116,16 +116,17 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">文件路径分隔符跨平台问题</h1>
+        <h1 class="post-title" itemprop="name headline">Idea中Maven无法显示依赖</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="http://www.cmyblog.top" rel="author">CaoMy</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2019-07-09 itemprop="datePublished">July 9, 2019</time>
+                on <time datetime=2019-07-10 itemprop="datePublished">July 10, 2019</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
                 <span class="post-category">
-                        <a href="http://www.cmyblog.top/categories/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/"> 日常记录 </a>
+                        <a href="http://www.cmyblog.top/categories/%E8%B8%A9%E5%9D%91/"> 踩坑 </a>
+                        <a href="http://www.cmyblog.top/categories/maven/"> Maven </a>
                         
                 </span>
         </div>
@@ -133,6 +134,8 @@
     <div class="post-content">
         
 
+        
+            
         
 
         
@@ -146,15 +149,25 @@
           
           
 
-          <p>　　考虑到不同平台下，文件路径分隔符不同，如Windows下为&rsquo;<code>\</code>&rsquo;,Linux下为&rsquo;<code>/</code>&lsquo;，项目中如果不考虑分隔符的多平台一致，经常会造成上线问题，报错诸如：&rsquo;<code>no such file or directory</code>&lsquo;</p>
+          <p>　　<code>Idea</code>有时会出现<code>Maven</code>的依赖无法显示情况，即在右边栏<code>Maven</code>工具中,<code>Dependencies</code>一栏中，没有正确的依赖显示，如</p>
 
-<p>　　此时，可以使用File的静态常量<code>separator</code>，如，</p>
+<p><img src="http://ww1.sinaimg.cn/mw690/006aLRzqly1g4v34l4g9ej30jq0hzmyl.jpg" height="50%" width="50%" alt="Idea中Maven工具显示依赖">  </br></p>
 
-<pre><code class="language-java">String fileHome = &quot;&quot;;
-String fileName = &quot;&quot;;
-                    
-File file = new File(fileHome + File.separator + fileName);
-</code></pre>
+<p>　　考虑了网上的诸多解决方案，均没有解决问题，后来经过同事帮助，解决了问题，具体解决思路步骤如下：</p>
+
+<ul>
+<li>
+
+<ul>
+<li>同事通过执行<code>mvn -version</code>命令，输出正常<code>Maven</code>信息，排除本地<code>Maven</code>工具错误的可能</li>
+<li>接下来，执行&rsquo;mvn clean&rsquo;和&rsquo;mvn -Dmaven.test.skip=true install&rsquo;命令，分别清除编译的<code>class</code>文件并跳过测试进行安装,发现没有输出报错信息，并正常安装，此时可以证明，依赖已经正常引入</li>
+<li>接下来，怀疑是Idea缓存的锅，进行Idea的缓存清除操作并重启,如</li>
+</ul></li>
+</ul>
+
+<p><img src="http://ww1.sinaimg.cn/large/006aLRzqly1g4v413xykgj30dg0h1aao.jpg" alt="Idea清除缓存操作" height="355.51" width="390"></br></p>
+
+<p>　　重启后，<code>Idea</code>里的<code>Maven</code>工具已正常显示依赖项，问题解决，特此记录。</p>
 
     </div>
 
@@ -180,8 +193,11 @@ File file = new File(fileHome + File.separator + fileName);
             <section>
             <i class="iconfont icon-tag"></i>Tag(s): 
             
-            <span class="tag"><a href="http://www.cmyblog.top/tags/java/">
-                    #Java</a></span>
+            <span class="tag"><a href="http://www.cmyblog.top/tags/maven/">
+                    #Maven</a></span>
+            
+            <span class="tag"><a href="http://www.cmyblog.top/tags/%E8%B8%A9%E5%9D%91/">
+                    #踩坑</a></span>
             
             </section>
         
@@ -192,9 +208,9 @@ File file = new File(fileHome + File.separator + fileName);
     </div>
 
     <div class="post-nav">
-         
         
-        <a href="http://www.cmyblog.top/posts/idea%E4%B8%ADmaven%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%BE%9D%E8%B5%96/" class="next" rel="next" title="Idea中Maven无法显示依赖">Idea中Maven无法显示依赖&nbsp;<i class="iconfont icon-right"></i></a>
+        <a href="http://www.cmyblog.top/posts/%E9%9A%8F%E7%AC%94/" class="prev" rel="prev" title="文件路径分隔符跨平台问题"><i class="iconfont icon-left"></i>&nbsp;文件路径分隔符跨平台问题</a>
+         
         
     </div>
 
@@ -237,8 +253,9 @@ File file = new File(fileHome + File.separator + fileName);
 
 
     
-    
-    <script src="../../js/vendor_no_gallery.min.js" async=""></script>
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="../../js/vendor_gallery.min.js" async="" ></script>
     
   
 

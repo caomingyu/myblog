@@ -4,7 +4,7 @@
     <url>
       <loc>http://www.cmyblog.top/</loc>
       
-      <lastmod>2019-07-09T11:13:42+08:00</lastmod>
+      <lastmod>2019-07-10T21:45:41+08:00</lastmod>
       
       
       
@@ -16,7 +16,7 @@
     <url>
       <loc>http://www.cmyblog.top/categories/</loc>
       
-      <lastmod>2019-07-09T11:13:42+08:00</lastmod>
+      <lastmod>2019-07-10T21:45:41+08:00</lastmod>
       
       
       
@@ -26,9 +26,31 @@
     </url>
   
     <url>
-      <loc>http://www.cmyblog.top/tags/java/</loc>
+      <loc>http://www.cmyblog.top/posts/idea%E4%B8%ADmaven%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%BE%9D%E8%B5%96/</loc>
       
-      <lastmod>2019-07-09T11:13:42+08:00</lastmod>
+      <lastmod>2019-07-10T21:45:41+08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>http://www.cmyblog.top/categories/maven/</loc>
+      
+      <lastmod>2019-07-10T21:45:41+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>http://www.cmyblog.top/tags/maven/</loc>
+      
+      <lastmod>2019-07-10T21:45:41+08:00</lastmod>
       
       
       
@@ -40,7 +62,7 @@
     <url>
       <loc>http://www.cmyblog.top/posts/</loc>
       
-      <lastmod>2019-07-09T11:13:42+08:00</lastmod>
+      <lastmod>2019-07-10T21:45:41+08:00</lastmod>
       
       
       
@@ -51,6 +73,42 @@
   
     <url>
       <loc>http://www.cmyblog.top/tags/</loc>
+      
+      <lastmod>2019-07-10T21:45:41+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>http://www.cmyblog.top/categories/%E8%B8%A9%E5%9D%91/</loc>
+      
+      <lastmod>2019-07-10T21:45:41+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>http://www.cmyblog.top/tags/%E8%B8%A9%E5%9D%91/</loc>
+      
+      <lastmod>2019-07-10T21:45:41+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>http://www.cmyblog.top/tags/java/</loc>
       
       <lastmod>2019-07-09T11:13:42+08:00</lastmod>
       

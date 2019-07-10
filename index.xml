@@ -5,8 +5,36 @@
     <description>Recent content in CaoMyの博客 on CaoMyの博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 09 Jul 2019 11:13:42 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jul 2019 21:45:41 +0800</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Idea中Maven无法显示依赖</title>
+      <link>http://www.cmyblog.top/posts/idea%E4%B8%ADmaven%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%BE%9D%E8%B5%96/</link>
+      <pubDate>Wed, 10 Jul 2019 21:45:41 +0800</pubDate>
+      
+      <guid>http://www.cmyblog.top/posts/idea%E4%B8%ADmaven%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%BE%9D%E8%B5%96/</guid>
+      <description>&lt;p&gt;　　&lt;code&gt;Idea&lt;/code&gt;有时会出现&lt;code&gt;Maven&lt;/code&gt;的依赖无法显示情况，即在右边栏&lt;code&gt;Maven&lt;/code&gt;工具中,&lt;code&gt;Dependencies&lt;/code&gt;一栏中，没有正确的依赖显示，如&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ww1.sinaimg.cn/mw690/006aLRzqly1g4v34l4g9ej30jq0hzmyl.jpg&#34; height=&#34;50%&#34; width=&#34;50%&#34; alt=&#34;Idea中Maven工具显示依赖&#34;&gt;  &lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;　　考虑了网上的诸多解决方案，均没有解决问题，后来经过同事帮助，解决了问题，具体解决思路步骤如下：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+
+&lt;ul&gt;
+&lt;li&gt;同事通过执行&lt;code&gt;mvn -version&lt;/code&gt;命令，输出正常&lt;code&gt;Maven&lt;/code&gt;信息，排除本地&lt;code&gt;Maven&lt;/code&gt;工具错误的可能&lt;/li&gt;
+&lt;li&gt;接下来，执行&amp;rsquo;mvn clean&amp;rsquo;和&amp;rsquo;mvn -Dmaven.test.skip=true install&amp;rsquo;命令，分别清除编译的&lt;code&gt;class&lt;/code&gt;文件并跳过测试进行安装,发现没有输出报错信息，并正常安装，此时可以证明，依赖已经正常引入&lt;/li&gt;
+&lt;li&gt;接下来，怀疑是Idea缓存的锅，进行Idea的缓存清除操作并重启,如&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ww1.sinaimg.cn/large/006aLRzqly1g4v413xykgj30dg0h1aao.jpg&#34; alt=&#34;Idea清除缓存操作&#34; height=&#34;355.51&#34; width=&#34;390&#34;&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;　　重启后，&lt;code&gt;Idea&lt;/code&gt;里的&lt;code&gt;Maven&lt;/code&gt;工具已正常显示依赖项，问题解决，特此记录。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>文件路径分隔符跨平台问题</title>

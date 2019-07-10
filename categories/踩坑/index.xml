@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on CaoMyの博客</title>
-    <link>http://www.cmyblog.top/posts/</link>
-    <description>Recent content in Posts on CaoMyの博客</description>
+    <title>踩坑 on CaoMyの博客</title>
+    <link>http://www.cmyblog.top/categories/%E8%B8%A9%E5%9D%91/</link>
+    <description>Recent content in 踩坑 on CaoMyの博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 10 Jul 2019 21:45:41 +0800</lastBuildDate>
     
-	<atom:link href="http://www.cmyblog.top/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.cmyblog.top/categories/%E8%B8%A9%E5%9D%91/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -22,17 +22,6 @@
 　考虑了网上的诸多解决方案，均没有解决问题，后来经过同事帮助，解决了问题，具体解决思路步骤如下：
    同事通过执行mvn -version命令，输出正常Maven信息，排除本地Maven工具错误的可能 接下来，执行&amp;rsquo;mvn clean&amp;rsquo;和&amp;rsquo;mvn -Dmaven.test.skip=true install&amp;rsquo;命令，分别清除编译的class文件并跳过测试进行安装,发现没有输出报错信息，并正常安装，此时可以证明，依赖已经正常引入 接下来，怀疑是Idea缓存的锅，进行Idea的缓存清除操作并重启,如   
 　重启后，Idea里的Maven工具已正常显示依赖项，问题解决，特此记录。</description>
-    </item>
-    
-    <item>
-      <title>文件路径分隔符跨平台问题</title>
-      <link>http://www.cmyblog.top/posts/%E9%9A%8F%E7%AC%94/</link>
-      <pubDate>Tue, 09 Jul 2019 11:13:42 +0800</pubDate>
-      
-      <guid>http://www.cmyblog.top/posts/%E9%9A%8F%E7%AC%94/</guid>
-      <description>　考虑到不同平台下，文件路径分隔符不同，如Windows下为&amp;rsquo;\&amp;rsquo;,Linux下为&amp;rsquo;/&amp;lsquo;，项目中如果不考虑分隔符的多平台一致，经常会造成上线问题，报错诸如：&amp;rsquo;no such file or directory&amp;lsquo;
-　此时，可以使用File的静态常量separator，如，
-String fileHome = &amp;quot;&amp;quot;; String fileName = &amp;quot;&amp;quot;; File file = new File(fileHome + File.separator + fileName);  </description>
     </item>
     
   </channel>
