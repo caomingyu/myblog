@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring注解 on CaoMyの博客</title>
+    <link>http://www.cmyblog.top/tags/spring%E6%B3%A8%E8%A7%A3/</link>
+    <description>Recent content in Spring注解 on CaoMyの博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 17 Jul 2019 22:44:20 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.cmyblog.top/tags/spring%E6%B3%A8%E8%A7%A3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>@VALUE注解对0开头数字的解析</title>
+      <link>http://www.cmyblog.top/posts/value%E6%B3%A8%E8%A7%A3%E5%AF%B90%E5%BC%80%E5%A4%B4%E6%95%B0%E5%AD%97%E7%9A%84%E8%A7%A3%E6%9E%90/</link>
+      <pubDate>Wed, 17 Jul 2019 22:44:20 +0800</pubDate>
+      
+      <guid>http://www.cmyblog.top/posts/value%E6%B3%A8%E8%A7%A3%E5%AF%B90%E5%BC%80%E5%A4%B4%E6%95%B0%E5%AD%97%E7%9A%84%E8%A7%A3%E6%9E%90/</guid>
+      <description>Spring的@VALUE注解对于properties和yml格式的配置文件，进行解析时，对于0开头的值，会进行解析操作
+　对于非0开头的值，会按照正常类型进行解析
+　对于0开头的值，对安装对应进制进行解析(即，安装数字转型进行处理)
+　为了解决这一问题，可以用&amp;quot;&amp;quot;将值引起来，@VALUE注解就会按照字符串的形式进行解析</description>
+    </item>
+    
+  </channel>
+</rss>

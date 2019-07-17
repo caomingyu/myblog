@@ -5,8 +5,24 @@
     <description>Recent content in CaoMyの博客 on CaoMyの博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 10 Jul 2019 21:45:41 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jul 2019 22:44:20 +0800</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>@VALUE注解对0开头数字的解析</title>
+      <link>http://www.cmyblog.top/posts/value%E6%B3%A8%E8%A7%A3%E5%AF%B90%E5%BC%80%E5%A4%B4%E6%95%B0%E5%AD%97%E7%9A%84%E8%A7%A3%E6%9E%90/</link>
+      <pubDate>Wed, 17 Jul 2019 22:44:20 +0800</pubDate>
+      
+      <guid>http://www.cmyblog.top/posts/value%E6%B3%A8%E8%A7%A3%E5%AF%B90%E5%BC%80%E5%A4%B4%E6%95%B0%E5%AD%97%E7%9A%84%E8%A7%A3%E6%9E%90/</guid>
+      <description>&lt;p&gt;　　Spring的&lt;code&gt;@VALUE&lt;/code&gt;注解对于&lt;code&gt;properties&lt;/code&gt;和&lt;code&gt;yml&lt;/code&gt;格式的配置文件，进行解析时，对于&lt;code&gt;0&lt;/code&gt;开头的值，会进行解析操作&lt;/p&gt;
+
+&lt;p&gt;　　对于非&lt;code&gt;0&lt;/code&gt;开头的值，会按照正常类型进行解析&lt;/p&gt;
+
+&lt;p&gt;　　对于&lt;code&gt;0&lt;/code&gt;开头的值，对安装对应进制进行解析(即，安装数字转型进行处理)&lt;/p&gt;
+
+&lt;p&gt;　　为了解决这一问题，可以用&lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt;将值引起来，&lt;code&gt;@VALUE&lt;/code&gt;注解就会按照字符串的形式进行解析&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Idea中Maven无法显示依赖</title>
