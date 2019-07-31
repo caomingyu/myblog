@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jar on CaoMyの博客</title>
+    <link>http://www.cmyblog.top/categories/jar/</link>
+    <description>Recent content in jar on CaoMyの博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 31 Jul 2019 17:51:19 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.cmyblog.top/categories/jar/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在Linux系统上，怎么书写jar的启停脚本</title>
+      <link>http://www.cmyblog.top/posts/linux%E4%B8%8B%E4%B9%A6%E5%86%99%E5%9F%BA%E4%BA%8Ejar%E7%9A%84%E5%90%AF%E5%81%9C%E8%84%9A%E6%9C%AC/</link>
+      <pubDate>Wed, 31 Jul 2019 17:51:19 +0800</pubDate>
+      
+      <guid>http://www.cmyblog.top/posts/linux%E4%B8%8B%E4%B9%A6%E5%86%99%E5%9F%BA%E4%BA%8Ejar%E7%9A%84%E5%90%AF%E5%81%9C%E8%84%9A%E6%9C%AC/</guid>
+      <description>在Linux系统上，怎么书写jar的启停脚本
+ 启动脚本参考  #!/bin/sh pidfile=tpid if [ -f &amp;quot;$pidfile&amp;quot; ] &amp;amp;&amp;amp; kill -0 $( cat &amp;quot;$pidfile&amp;quot; ); then echo &amp;quot;jar 已经在运行中...&amp;quot; exit 1 fi nohup java -jar &amp;lt;jar包名&amp;gt; --spring.config.location=/home/cmy/test/ --logging.config=logback-spring.xml &amp;gt;/dev/null 2&amp;gt;&amp;amp;1&amp;amp; echo $! &amp;gt; tpid echo &amp;quot;jar启动成功&amp;quot;   停止脚本参考  #!/bin/sh pidfile=tpid if [ ! -f &amp;quot;$pidfile&amp;quot; ] || ! kill -0 $( cat &amp;quot;$pidfile&amp;quot; ); then echo &amp;quot;jar没有在运行&amp;quot; else echo &amp;quot;正在停止jar...&amp;quot; PID=$(cat &amp;quot;$pidfile&amp;quot;) kill -9 $PID rm &amp;quot;$pidfile&amp;quot; &amp;amp;&amp;amp; echo &amp;quot;jar已停止&amp;quot; fi  </description>
+    </item>
+    
+    <item>
+      <title>运行spring boot打的jar包时，怎么指定配置文件</title>
+      <link>http://www.cmyblog.top/posts/%E8%BF%90%E8%A1%8Cspringboot%E6%9E%84%E5%BB%BA%E7%9A%84jar%E6%97%B6%E6%8C%87%E5%AE%9A%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Wed, 31 Jul 2019 17:45:06 +0800</pubDate>
+      
+      <guid>http://www.cmyblog.top/posts/%E8%BF%90%E8%A1%8Cspringboot%E6%9E%84%E5%BB%BA%E7%9A%84jar%E6%97%B6%E6%8C%87%E5%AE%9A%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</guid>
+      <description>运行spring boot打的jar包时，怎么指定配置文件
+ 在pom.xml文件中，排除要单独指定的配置文件  &amp;lt;resources&amp;gt; &amp;lt;resource&amp;gt; &amp;lt;directory&amp;gt;src\main\resources&amp;lt;/directory&amp;gt; &amp;lt;!--配置文件路径--&amp;gt; &amp;lt;excludes&amp;gt; &amp;lt;exclude&amp;gt;logback-spring.xml&amp;lt;/exclude&amp;gt; &amp;lt;!--要排除的配置文件名--&amp;gt; &amp;lt;exclude&amp;gt;application.yml&amp;lt;/exclude&amp;gt; &amp;lt;exclude&amp;gt;application-pro.yml&amp;lt;/exclude&amp;gt; &amp;lt;/excludes&amp;gt; &amp;lt;/resource&amp;gt; &amp;lt;/resources&amp;gt;   通过Maven打包后，执行jar包时，指定所需配置文件  java -jar &amp;lt;jar包名&amp;gt; --spring.config.location=/home/cmy/test/ --logging.config=logback-spring.xml &amp;amp;   进阶，配合nohup命令，实现无控制台日志输出的后台运行jar包  nohup java -jar &amp;lt;jar包名&amp;gt; --spring.config.location=/home/cmy/test/ --logging.config=logback-spring.xml &amp;gt;/dev/null 2&amp;gt;&amp;amp;1&amp;amp;   其中，如下命令实现了nohup命令无控制台日志输出功能
+nohup &amp;lt;...&amp;gt; &amp;gt;/dev/null 2&amp;gt;&amp;amp;1&amp;amp;   </description>
+    </item>
+    
+  </channel>
+</rss>
