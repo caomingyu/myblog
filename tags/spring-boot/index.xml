@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Maven on CaoMyの博客</title>
-    <link>http://www.cmyblog.top/categories/maven/</link>
-    <description>Recent content in Maven on CaoMyの博客</description>
+    <title>spring boot on CaoMyの博客</title>
+    <link>http://www.cmyblog.top/tags/spring-boot/</link>
+    <description>Recent content in spring boot on CaoMyの博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 31 Jul 2019 17:26:31 +0800</lastBuildDate>
     
-	<atom:link href="http://www.cmyblog.top/categories/maven/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.cmyblog.top/tags/spring-boot/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,19 +21,6 @@
  pom.xml文件中，配置本地jar包路径和在build标签下增加配置
  如下代码所示,
  引入本地jar包  &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.aaa&amp;lt;/groupId&amp;gt; &amp;lt;!--无所谓，随便写--&amp;gt; &amp;lt;artifactId&amp;gt;bbb&amp;lt;/artifactId&amp;gt; &amp;lt;!--无所谓，随便写,作为项目jar中的外部jar包名字--&amp;gt; &amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt; &amp;lt;!--无所谓，随便写--&amp;gt; &amp;lt;scope&amp;gt;system&amp;lt;/scope&amp;gt; &amp;lt;systemPath&amp;gt;${project.basedir}/lib/ojdbc6.jar&amp;lt;/systemPath&amp;gt; &amp;lt;!--本地jar路径--&amp;gt; &amp;lt;/dependency&amp;gt;   修改build标签配置  &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;includeSystemScope&amp;gt;true&amp;lt;/includeSystemScope&amp;gt; &amp;lt;!--增加此配置--&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/build&amp;gt;   </description>
-    </item>
-    
-    <item>
-      <title>Idea中Maven无法显示依赖</title>
-      <link>http://www.cmyblog.top/posts/idea%E4%B8%ADmaven%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%BE%9D%E8%B5%96/</link>
-      <pubDate>Wed, 10 Jul 2019 21:45:41 +0800</pubDate>
-      
-      <guid>http://www.cmyblog.top/posts/idea%E4%B8%ADmaven%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%BE%9D%E8%B5%96/</guid>
-      <description>Idea有时会出现Maven的依赖无法显示情况，即在右边栏Maven工具中,Dependencies一栏中，没有正确的依赖显示，如
-
-　考虑了网上的诸多解决方案，均没有解决问题，后来经过同事帮助，解决了问题，具体解决思路步骤如下：
-   同事通过执行mvn -version命令，输出正常Maven信息，排除本地Maven工具错误的可能 接下来，执行&amp;rsquo;mvn clean&amp;rsquo;和&amp;rsquo;mvn -Dmaven.test.skip=true install&amp;rsquo;命令，分别清除编译的class文件并跳过测试进行安装,发现没有输出报错信息，并正常安装，此时可以证明，依赖已经正常引入 接下来，怀疑是Idea缓存的锅，进行Idea的缓存清除操作并重启,如   
-　重启后，Idea里的Maven工具已正常显示依赖项，问题解决，特此记录。</description>
     </item>
     
   </channel>

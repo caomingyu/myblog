@@ -5,8 +5,54 @@
     <description>Recent content in CaoMyの博客 on CaoMyの博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 17 Jul 2019 22:44:20 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jul 2019 17:26:31 +0800</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Spring Boot通过Maven打jar包时，怎么引入本地jar包</title>
+      <link>http://www.cmyblog.top/posts/springboot%E4%B8%8Bmaven%E6%89%93jar%E5%8C%85%E6%97%B6%E5%BC%95%E5%85%A5%E6%9C%AC%E5%9C%B0jar/</link>
+      <pubDate>Wed, 31 Jul 2019 17:26:31 +0800</pubDate>
+      
+      <guid>http://www.cmyblog.top/posts/springboot%E4%B8%8Bmaven%E6%89%93jar%E5%8C%85%E6%97%B6%E5%BC%95%E5%85%A5%E6%9C%AC%E5%9C%B0jar/</guid>
+      <description>&lt;p&gt;&lt;code&gt;spring boot&lt;/code&gt;通过&lt;code&gt;Maven&lt;/code&gt;打jar包时，怎么引入本地&lt;code&gt;jar&lt;/code&gt;包&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;pom.xml&lt;/code&gt;文件中，配置本地&lt;code&gt;jar&lt;/code&gt;包路径和在&lt;code&gt;build&lt;/code&gt;标签下增加配置&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;如下代码所示,&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;引入本地&lt;code&gt;jar&lt;/code&gt;包&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;com.aaa&amp;lt;/groupId&amp;gt; &amp;lt;!--无所谓，随便写--&amp;gt;
+    &amp;lt;artifactId&amp;gt;bbb&amp;lt;/artifactId&amp;gt; &amp;lt;!--无所谓，随便写,作为项目jar中的外部jar包名字--&amp;gt;
+    &amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt; &amp;lt;!--无所谓，随便写--&amp;gt;
+    &amp;lt;scope&amp;gt;system&amp;lt;/scope&amp;gt;
+    &amp;lt;systemPath&amp;gt;${project.basedir}/lib/ojdbc6.jar&amp;lt;/systemPath&amp;gt; &amp;lt;!--本地jar路径--&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;修改&lt;code&gt;build&lt;/code&gt;标签配置&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;    &amp;lt;build&amp;gt;
+        &amp;lt;plugins&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt;
+                &amp;lt;configuration&amp;gt;
+                    &amp;lt;includeSystemScope&amp;gt;true&amp;lt;/includeSystemScope&amp;gt; &amp;lt;!--增加此配置--&amp;gt;
+                &amp;lt;/configuration&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+        &amp;lt;/plugins&amp;gt;
+    &amp;lt;/build&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>@VALUE注解对0开头数字的解析</title>

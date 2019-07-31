@@ -9,9 +9,9 @@
   
   
   
-  <link rel="prev" href="http://www.cmyblog.top/posts/idea%E4%B8%ADmaven%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%BE%9D%E8%B5%96/" />
-  <link rel="next" href="http://www.cmyblog.top/posts/springboot%E4%B8%8Bmaven%E6%89%93jar%E5%8C%85%E6%97%B6%E5%BC%95%E5%85%A5%E6%9C%AC%E5%9C%B0jar/" />
-  <link rel="canonical" href="http://www.cmyblog.top/posts/value%E6%B3%A8%E8%A7%A3%E5%AF%B90%E5%BC%80%E5%A4%B4%E6%95%B0%E5%AD%97%E7%9A%84%E8%A7%A3%E6%9E%90/" />
+  <link rel="prev" href="http://www.cmyblog.top/posts/value%E6%B3%A8%E8%A7%A3%E5%AF%B90%E5%BC%80%E5%A4%B4%E6%95%B0%E5%AD%97%E7%9A%84%E8%A7%A3%E6%9E%90/" />
+  
+  <link rel="canonical" href="http://www.cmyblog.top/posts/springboot%E4%B8%8Bmaven%E6%89%93jar%E5%8C%85%E6%97%B6%E5%BC%95%E5%85%A5%E6%9C%AC%E5%9C%B0jar/" />
   <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-           @VALUE注解对0开头数字的解析 | CaoMyの博客
+           Spring Boot通过Maven打jar包时，怎么引入本地jar包 | CaoMyの博客
        
   </title>
-  <meta name="title" content="@VALUE注解对0开头数字的解析 | CaoMyの博客">
+  <meta name="title" content="Spring Boot通过Maven打jar包时，怎么引入本地jar包 | CaoMyの博客">
     
   
   <link rel="stylesheet" href="../../font/iconfont.css">
@@ -44,9 +44,9 @@
          "@id": "http:\/\/www.cmyblog.top"
     },
     "articleSection" : "posts",
-    "name" : "@VALUE注解对0开头数字的解析",
-    "headline" : "@VALUE注解对0开头数字的解析",
-    "description" : "Spring的@VALUE注解对于properties和yml格式的配置文件，进行解析时，对于0开头的值，会进行解析操作\n　对于非0开头的值，会按照正常类型进行解析\n　对于0开头的值，对安装对应进制进行解析(即，安装数字转型进行处理)\n　为了解决这一问题，可以用\x26quot;\x26quot;将值引起来，@VALUE注解就会按照字符串的形式进行解析",
+    "name" : "Spring Boot通过Maven打jar包时，怎么引入本地jar包",
+    "headline" : "Spring Boot通过Maven打jar包时，怎么引入本地jar包",
+    "description" : "spring boot通过Maven打jar包时，怎么引入本地jar包\n pom.xml文件中，配置本地jar包路径和在build标签下增加配置\n 如下代码所示,\n 引入本地jar包  \x26lt;dependency\x26gt; \x26lt;groupId\x26gt;com.aaa\x26lt;\/groupId\x26gt; \x26lt;!--无所谓，随便写--\x26gt; \x26lt;artifactId\x26gt;bbb\x26lt;\/artifactId\x26gt; \x26lt;!--无所谓，随便写,作为项目jar中的外部jar包名字--\x26gt; \x26lt;version\x26gt;1.0.0\x26lt;\/version\x26gt; \x26lt;!--无所谓，随便写--\x26gt; \x26lt;scope\x26gt;system\x26lt;\/scope\x26gt; \x26lt;systemPath\x26gt;${project.basedir}\/lib\/ojdbc6.jar\x26lt;\/systemPath\x26gt; \x26lt;!--本地jar路径--\x26gt; \x26lt;\/dependency\x26gt;   修改build标签配置  \x26lt;build\x26gt; \x26lt;plugins\x26gt; \x26lt;plugin\x26gt; \x26lt;groupId\x26gt;org.springframework.boot\x26lt;\/groupId\x26gt; \x26lt;artifactId\x26gt;spring-boot-maven-plugin\x26lt;\/artifactId\x26gt; \x26lt;configuration\x26gt; \x26lt;includeSystemScope\x26gt;true\x26lt;\/includeSystemScope\x26gt; \x26lt;!--增加此配置--\x26gt; \x26lt;\/configuration\x26gt; \x26lt;\/plugin\x26gt; \x26lt;\/plugins\x26gt; \x26lt;\/build\x26gt;   ",
     "inLanguage" : "zh-CN",
     "author" : "CaoMy",
     "creator" : "CaoMy",
@@ -54,11 +54,11 @@
     "accountablePerson" : "CaoMy",
     "copyrightHolder" : "CaoMy",
     "copyrightYear" : "2019",
-    "datePublished": "2019-07-17 22:44:20 \x2b0800 CST",
-    "dateModified" : "2019-07-17 22:44:20 \x2b0800 CST",
-    "url" : "http:\/\/www.cmyblog.top\/posts\/value%E6%B3%A8%E8%A7%A3%E5%AF%B90%E5%BC%80%E5%A4%B4%E6%95%B0%E5%AD%97%E7%9A%84%E8%A7%A3%E6%9E%90\/",
-    "wordCount" : "4",
-    "keywords" : [ "Spring注解","踩坑", "CaoMyの博客"]
+    "datePublished": "2019-07-31 17:26:31 \x2b0800 CST",
+    "dateModified" : "2019-07-31 17:26:31 \x2b0800 CST",
+    "url" : "http:\/\/www.cmyblog.top\/posts\/springboot%E4%B8%8Bmaven%E6%89%93jar%E5%8C%85%E6%97%B6%E5%BC%95%E5%85%A5%E6%9C%AC%E5%9C%B0jar\/",
+    "wordCount" : "29",
+    "keywords" : [ "Maven","spring boot", "CaoMyの博客"]
 }
 </script>
 
@@ -116,17 +116,17 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">@VALUE注解对0开头数字的解析</h1>
+        <h1 class="post-title" itemprop="name headline">Spring Boot通过Maven打jar包时，怎么引入本地jar包</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="http://www.cmyblog.top" rel="author">CaoMy</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2019-07-17 itemprop="datePublished">July 17, 2019</time>
+                on <time datetime=2019-07-31 itemprop="datePublished">July 31, 2019</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
                 <span class="post-category">
-                        <a href="http://www.cmyblog.top/categories/%E8%B8%A9%E5%9D%91/"> 踩坑 </a>
-                        <a href="http://www.cmyblog.top/categories/spring%E6%B3%A8%E8%A7%A3/"> Spring注解 </a>
+                        <a href="http://www.cmyblog.top/categories/spring-boot/"> spring boot </a>
+                        <a href="http://www.cmyblog.top/categories/maven/"> Maven </a>
                         
                 </span>
         </div>
@@ -147,13 +147,43 @@
           
           
 
-          <p>　　Spring的<code>@VALUE</code>注解对于<code>properties</code>和<code>yml</code>格式的配置文件，进行解析时，对于<code>0</code>开头的值，会进行解析操作</p>
+          <p><code>spring boot</code>通过<code>Maven</code>打jar包时，怎么引入本地<code>jar</code>包</p>
 
-<p>　　对于非<code>0</code>开头的值，会按照正常类型进行解析</p>
+<ul>
+<li><p><code>pom.xml</code>文件中，配置本地<code>jar</code>包路径和在<code>build</code>标签下增加配置</p></li>
 
-<p>　　对于<code>0</code>开头的值，对安装对应进制进行解析(即，安装数字转型进行处理)</p>
+<li><p>如下代码所示,</p>
 
-<p>　　为了解决这一问题，可以用<code>&quot;&quot;</code>将值引起来，<code>@VALUE</code>注解就会按照字符串的形式进行解析</p>
+<ul>
+<li>引入本地<code>jar</code>包</li>
+</ul>
+
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;com.aaa&lt;/groupId&gt; &lt;!--无所谓，随便写--&gt;
+    &lt;artifactId&gt;bbb&lt;/artifactId&gt; &lt;!--无所谓，随便写,作为项目jar中的外部jar包名字--&gt;
+    &lt;version&gt;1.0.0&lt;/version&gt; &lt;!--无所谓，随便写--&gt;
+    &lt;scope&gt;system&lt;/scope&gt;
+    &lt;systemPath&gt;${project.basedir}/lib/ojdbc6.jar&lt;/systemPath&gt; &lt;!--本地jar路径--&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<ul>
+<li>修改<code>build</code>标签配置</li>
+</ul>
+
+<pre><code class="language-xml">    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+                &lt;configuration&gt;
+                    &lt;includeSystemScope&gt;true&lt;/includeSystemScope&gt; &lt;!--增加此配置--&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+</code></pre></li>
+</ul>
 
     </div>
 
@@ -179,11 +209,11 @@
             <section>
             <i class="iconfont icon-tag"></i>Tag(s): 
             
-            <span class="tag"><a href="http://www.cmyblog.top/tags/spring%E6%B3%A8%E8%A7%A3/">
-                    #Spring注解</a></span>
+            <span class="tag"><a href="http://www.cmyblog.top/tags/maven/">
+                    #Maven</a></span>
             
-            <span class="tag"><a href="http://www.cmyblog.top/tags/%E8%B8%A9%E5%9D%91/">
-                    #踩坑</a></span>
+            <span class="tag"><a href="http://www.cmyblog.top/tags/spring-boot/">
+                    #spring boot</a></span>
             
             </section>
         
@@ -195,10 +225,8 @@
 
     <div class="post-nav">
         
-        <a href="http://www.cmyblog.top/posts/idea%E4%B8%ADmaven%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%BE%9D%E8%B5%96/" class="prev" rel="prev" title="Idea中Maven无法显示依赖"><i class="iconfont icon-left"></i>&nbsp;Idea中Maven无法显示依赖</a>
+        <a href="http://www.cmyblog.top/posts/value%E6%B3%A8%E8%A7%A3%E5%AF%B90%E5%BC%80%E5%A4%B4%E6%95%B0%E5%AD%97%E7%9A%84%E8%A7%A3%E6%9E%90/" class="prev" rel="prev" title="@VALUE注解对0开头数字的解析"><i class="iconfont icon-left"></i>&nbsp;@VALUE注解对0开头数字的解析</a>
          
-        
-        <a href="http://www.cmyblog.top/posts/springboot%E4%B8%8Bmaven%E6%89%93jar%E5%8C%85%E6%97%B6%E5%BC%95%E5%85%A5%E6%9C%AC%E5%9C%B0jar/" class="next" rel="next" title="Spring Boot通过Maven打jar包时，怎么引入本地jar包">Spring Boot通过Maven打jar包时，怎么引入本地jar包&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
