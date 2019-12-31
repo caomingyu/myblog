@@ -4,7 +4,7 @@
     <url>
       <loc>http://www.cmyblog.top/</loc>
       
-      <lastmod>2019-07-31T17:51:19+08:00</lastmod>
+      <lastmod>2019-12-31T18:13:59+08:00</lastmod>
       
       
       
@@ -16,7 +16,7 @@
     <url>
       <loc>http://www.cmyblog.top/categories/</loc>
       
-      <lastmod>2019-07-31T17:51:19+08:00</lastmod>
+      <lastmod>2019-12-31T18:13:59+08:00</lastmod>
       
       
       
@@ -28,7 +28,7 @@
     <url>
       <loc>http://www.cmyblog.top/posts/</loc>
       
-      <lastmod>2019-07-31T17:51:19+08:00</lastmod>
+      <lastmod>2019-12-31T18:13:59+08:00</lastmod>
       
       
       
@@ -38,9 +38,67 @@
     </url>
   
     <url>
+      <loc>http://www.cmyblog.top/posts/springboot%E4%BD%BF%E7%94%A8redis%E7%BC%93%E5%AD%98%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</loc>
+      
+      <lastmod>2019-12-31T18:13:59+08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
       <loc>http://www.cmyblog.top/tags/</loc>
       
-      <lastmod>2019-07-31T17:51:19+08:00</lastmod>
+      <lastmod>2019-12-31T18:13:59+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>http://www.cmyblog.top/categories/redis/</loc>
+      
+      <lastmod>2019-12-31T18:13:59+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>http://www.cmyblog.top/tags/redis/</loc>
+      
+      <lastmod>2019-12-31T18:13:59+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>http://www.cmyblog.top/categories/spring-boot/</loc>
+      
+      <lastmod>2019-12-31T18:13:59+08:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>http://www.cmyblog.top/tags/spring-boot/</loc>
+      
+      <lastmod>2019-12-31T18:13:59+08:00</lastmod>
       
       
       
@@ -103,30 +161,6 @@
       <lastmod>2019-07-31T17:51:19+08:00</lastmod>
       
       
-      
-      
-    </url>
-  
-    <url>
-      <loc>http://www.cmyblog.top/categories/spring-boot/</loc>
-      
-      <lastmod>2019-07-31T17:45:06+08:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>http://www.cmyblog.top/tags/spring-boot/</loc>
-      
-      <lastmod>2019-07-31T17:45:06+08:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
       
       
     </url>
