@@ -46,7 +46,7 @@
     "articleSection" : "posts",
     "name" : "SpringBoot使用Redis缓存遇到的坑",
     "headline" : "SpringBoot使用Redis缓存遇到的坑",
-    "description" : " Spring Boot集成Redis缓存的坑 一、存放缓存时 ​ 方法头的的@CachePut注解，会将方法的返回值缓存进配置的缓存中。（注：如果方法返回为null，则会把null缓存进去）\n@CachePut(value = \x26quot;user\x26quot;, key = \x26quot;#user.id\x26quot;) @Override public User put(User user) { DATABASES.put(user.getId(), user); log.info(\x26quot;保存用户【user】= {}\x26quot;, user); return user; }  ",
+    "description" : " Spring Boot集成Redis缓存的坑 一、存放缓存时 ​ 方法头的的@CachePut注解，会将方法的返回值缓存进配置的缓存中。（注：如果方法返回为null，则会把null缓存进去）\n@CachePut(value = \x26quot;user\x26quot;, key = \x26quot;#user.id\x26quot;) @Override public User put(User user) { DATABASES.put(user.getId(), user); log.info(\x26quot;保存用户【user】= {}\x26quot;, user); return user; }  二、序列化 ​ Spring Boot在集成 redis做为缓存时，默认的缓存管理器，是通过使用默认的JdkSerializationRedisSerializer序列化器来序列化value的，因为，会出现以下情况，\n不易查看\n​ 可以采用使用Jackson2JsonRedisSerializer来进行序列化（Json格式）\n{\x26quot;@class\x26quot;:\x26quot;com.example.studyproject.domain.User\x26quot;,\x26quot;id\x26quot;:4,\x26quot;name\x26quot;:\x26quot;测试中文\x26quot;,\x26quot;passWord\x26quot;:\x26quot;123\x26quot;}  ",
     "inLanguage" : "zh-CN",
     "author" : "CaoMy",
     "creator" : "CaoMy",
@@ -57,7 +57,7 @@
     "datePublished": "2019-12-31 18:13:59 \x2b0800 CST",
     "dateModified" : "2019-12-31 18:13:59 \x2b0800 CST",
     "url" : "http:\/\/www.cmyblog.top\/posts\/springboot%E4%BD%BF%E7%94%A8redis%E7%BC%93%E5%AD%98%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91\/",
-    "wordCount" : "25",
+    "wordCount" : "34",
     "keywords" : [ "redis","spring boot", "CaoMyの博客"]
 }
 </script>
@@ -135,6 +135,8 @@
         
 
         
+            
+        
 
         
         
@@ -162,6 +164,19 @@
         log.info(&quot;保存用户【user】= {}&quot;, user);
         return user;
     }
+</code></pre>
+
+<h3 id="二-序列化">二、序列化</h3>
+
+<p>​   <code>Spring Boot</code>在集成 <code>redis</code>做为缓存时，默认的缓存管理器，是通过使用默认的<code>JdkSerializationRedisSerializer</code>序列化器来序列化<code>value</code>的，因为，会出现以下情况，</p>
+
+<p><img src="C:\Users\CaoMy\AppData\Roaming\Typora\typora-user-images\image-20200101150002455.png" alt="image-20200101150002455" style="zoom:67%;" /></p>
+
+<p>不易查看</p>
+
+<p>​   可以采用使用<code>Jackson2JsonRedisSerializer</code>来进行序列化（<code>Json</code>格式）</p>
+
+<pre><code class="language-json">{&quot;@class&quot;:&quot;com.example.studyproject.domain.User&quot;,&quot;id&quot;:4,&quot;name&quot;:&quot;测试中文&quot;,&quot;passWord&quot;:&quot;123&quot;}
 </code></pre>
 
     </div>
@@ -222,7 +237,7 @@
     <div class="copyright">
         &copy;
         
-        <span itemprop="copyrightYear">2019 - 2019</span>
+        <span itemprop="copyrightYear">2019 - 2020</span>
         
         <span class="with-love">
     	 <i class="iconfont icon-love"></i> 
@@ -248,8 +263,9 @@
 
 
     
-    
-    <script src="../../js/vendor_no_gallery.min.js" async=""></script>
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="../../js/vendor_gallery.min.js" async="" ></script>
     
   
 

@@ -30,6 +30,19 @@
         return user;
     }
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;二-序列化&#34;&gt;二、序列化&lt;/h3&gt;
+
+&lt;p&gt;​   &lt;code&gt;Spring Boot&lt;/code&gt;在集成 &lt;code&gt;redis&lt;/code&gt;做为缓存时，默认的缓存管理器，是通过使用默认的&lt;code&gt;JdkSerializationRedisSerializer&lt;/code&gt;序列化器来序列化&lt;code&gt;value&lt;/code&gt;的，因为，会出现以下情况，&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;C:\Users\CaoMy\AppData\Roaming\Typora\typora-user-images\image-20200101150002455.png&#34; alt=&#34;image-20200101150002455&#34; style=&#34;zoom:67%;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;不易查看&lt;/p&gt;
+
+&lt;p&gt;​   可以采用使用&lt;code&gt;Jackson2JsonRedisSerializer&lt;/code&gt;来进行序列化（&lt;code&gt;Json&lt;/code&gt;格式）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{&amp;quot;@class&amp;quot;:&amp;quot;com.example.studyproject.domain.User&amp;quot;,&amp;quot;id&amp;quot;:4,&amp;quot;name&amp;quot;:&amp;quot;测试中文&amp;quot;,&amp;quot;passWord&amp;quot;:&amp;quot;123&amp;quot;}
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

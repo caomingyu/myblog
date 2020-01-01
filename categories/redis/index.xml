@@ -18,7 +18,10 @@
       
       <guid>http://www.cmyblog.top/posts/springboot%E4%BD%BF%E7%94%A8redis%E7%BC%93%E5%AD%98%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</guid>
       <description> Spring Boot集成Redis缓存的坑 一、存放缓存时 ​ 方法头的的@CachePut注解，会将方法的返回值缓存进配置的缓存中。（注：如果方法返回为null，则会把null缓存进去）
-@CachePut(value = &amp;quot;user&amp;quot;, key = &amp;quot;#user.id&amp;quot;) @Override public User put(User user) { DATABASES.put(user.getId(), user); log.info(&amp;quot;保存用户【user】= {}&amp;quot;, user); return user; }  </description>
+@CachePut(value = &amp;quot;user&amp;quot;, key = &amp;quot;#user.id&amp;quot;) @Override public User put(User user) { DATABASES.put(user.getId(), user); log.info(&amp;quot;保存用户【user】= {}&amp;quot;, user); return user; }  二、序列化 ​ Spring Boot在集成 redis做为缓存时，默认的缓存管理器，是通过使用默认的JdkSerializationRedisSerializer序列化器来序列化value的，因为，会出现以下情况，
+不易查看
+​ 可以采用使用Jackson2JsonRedisSerializer来进行序列化（Json格式）
+{&amp;quot;@class&amp;quot;:&amp;quot;com.example.studyproject.domain.User&amp;quot;,&amp;quot;id&amp;quot;:4,&amp;quot;name&amp;quot;:&amp;quot;测试中文&amp;quot;,&amp;quot;passWord&amp;quot;:&amp;quot;123&amp;quot;}  </description>
     </item>
     
   </channel>
